@@ -23,6 +23,8 @@ action=$1
 
 if [ "$action" == "build" ]; then
 
+    go get
+
     if [ -e "./vendor/vendor.json" ]; then
         govendor sync
     fi
